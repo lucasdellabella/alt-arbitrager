@@ -31,7 +31,7 @@ def exchanges_fix():
 ## TESTS
 def test_api_key_verified(exchanges_fix):
     # VERIFY EXCHANGES ARE ACTIVE
-    for ex in exchanges:
+    for ex in exchanges_fix:
         try:
             try:
                 ex.fetch_open_orders()
@@ -43,7 +43,7 @@ def test_api_key_verified(exchanges_fix):
             print(e)
 
 def test_xrb_trade_pairing_exists(exchanges_fix):
-    binance = exchanges[0]
+    binance = exchanges_fix[0]
     # FETCH BIDS AND ASKS ACROSS ALL EXCHANGES
     ticker = binance.fetch_ticker('XRB/BTC')
     assert ticker
