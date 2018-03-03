@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/lucasdellabella/alt-arbitrager.svg?branch=master)](https://travis-ci.org/lucasdellabella/alt-arbitrager)
+
 TODOs
 - Continue adding high volume exchanges
 - Continue adding coins with fast confirmation times 
