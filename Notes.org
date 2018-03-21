@@ -1,0 +1,19 @@
+* Exchanges
+  - Only exchanges that support withdrawals.
+  - Need to figure out how withdrawal support works; where does the money go?
+  - Binance, OKEx
+* Approach
+  - Find exchanges with low withdrawal fees; Binance?
+  - Must support NANO and Ripple; fast transaction speeds
+  - See which ones support short selling as well
+  - Dash has fast transactions as well
+** Backtesting
+   - What kind of data do we need?
+     - One approach is to get as much data as possible, decide on a trading strategy later
+     - Still begs the question of what "as much data" means; which exchanges, which markets do we care about
+** Within-exchange arbitrage
+   - Negative cycle detection, iterated with removal of negative cycle edges gives you all the arbitrage loops within a given exchange, for exchanges that support retrieval of all tickers at once.
+   - Get volume information from the order book; use minimum volume in cycle to calculate potential return given the multiplier
+   - Need to take into account transaction fees (fixed fees better; can use volume to make up for the fee).
+   - Percentage transaction fees more troublesome; will lose money in most cases.
+   - Select exchanges based on average multiplier, incorporate fee information?
